@@ -2,6 +2,7 @@
 import Card from '../Card.astro'
 import { Image } from "astro:assets"
 import Cocina from '../../images/cocina.jpg'
+import Carrusel from './Carrusel.tsx'
 ---
 <div class="relative pt-5">
     <div class="absolute top-0 left-0 right-0">
@@ -22,5 +23,11 @@ import Cocina from '../../images/cocina.jpg'
     </div>
     
 </div>
+<section class="bg-slate-900">
+    <h2 class="text-5xl text-center font-mono text-white block font-bold w-1/2 mx-auto mb-10">Explora Nuestros Proyectos en <span class="text-emerald-300 animate-pulse">Realidad Aumentada</span></h2>
+    <div class="border border-5 border-emerald-300 rounded-lg shadow-xl w-1/2 mx-auto shadow-emerald-500">
+        <Carrusel client:visible/>
+    </div>
+</section>
 
 

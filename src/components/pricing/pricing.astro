@@ -1,0 +1,46 @@
+---
+import Card from "./pricing-card.astro";
+---
+
+<section class="flex items-center justify-center h-[calc(100vh-10rem)]">
+  <div class="flex gap-10">
+    <Card
+      planName="Basic"
+      price="49,99"
+      description="Ideal para Estudiantes y Profesionales Independientes"
+      features={[
+        "Herramientas de visualización AR",
+        "Hasta 3 proyectos activos",
+        "Soporte por correo electrónico",
+        "Actualizaciones mensuales",
+      ]}
+    />
+    <Card
+      planName="Advanced"
+      price="79,99"
+      description="Ideal para Diseñadores y Arquitectos que necesitan Herramientas más Robustas"
+      features={[
+        "Todo en el Plan Básico",
+        "Hasta 10 proyectos activos",
+        "Exportación de modelos en alta resolución",
+        "Soporte prioritario 24/7",
+        'Actualizaciones semanales',
+        'Integración con software de diseño CAD'
+      ]}
+    />
+    <Card
+      planName="Enterprise"
+      price="199,99"
+      description="Ideal para Grandes Empresas y Equipos de Diseño"
+      features={[
+        "Todo en el Plan Avanzado",
+        "Proyectos ilimitados",
+        "Colaboración en tiempo real para equipos",
+        "Asesoría personalizada",
+        'Acceso a herramientas de análisis y métricas avanzada',
+        'Integración completa con sistemas ERP y BIM',
+        'Capacitación y soporte dedicados'
+      ]}
+    />
+  </div>
+</section>

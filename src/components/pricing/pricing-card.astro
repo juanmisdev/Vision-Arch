@@ -1,0 +1,35 @@
+---
+import { CiCircleCheck } from "react-icons/ci";
+
+interface Props {
+    planName: string;
+    price: string;
+    description: string;
+    features: string[];
+}
+
+const {planName, price, description, features} = Astro.props;
+---
+
+<div
+  class="bg-gradient-to-b from-black to-purple-950 rounded-xl shadow-lg shadow-purple-600 px-5 py-3 flex flex-col gap-10 max-w-sm"
+>
+  <div class="flex flex-col justify-evenly gap-10">
+    <p class="text-gray-400 opacity-70 font-semibold text-xl">{planName}</p>
+    <h2 class="text-gray-300 font-extrabold text-5xl">
+      ${price}<span class="text-xl opacity-50">/mo</span>
+    </h2>
+    <p class="text-gray-300 text-sm opacity-65">
+      {description}
+    </p>
+    <button class="bg-emerald-300 rounded-lg shadow-lg shadow-emerald-900 py-2 border border-emerald-100 text-black font-semibold">Empieza con {planName}</button>
+  </div>
+
+  <div class=" ">
+    <p class="text-gray-400 opacity-50 font-semibold text-sm text-center mb-7">Características</p>
+    <ul class="text-gray-400 opacity-90 flex flex-col gap-2">
+        {features.map((feature) => 
+            <li class="flex items-center gap-3"><span class="text-emerald-300"><CiCircleCheck /></span>{feature}</li>)}
+    </ul>
+  </div>
+</div>
