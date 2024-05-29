@@ -3,16 +3,16 @@ import Fondo from "../../images/robot3.png";
 import { Image } from "astro:assets";
 ---
 
-<div class="flex items-center justify-center h-[calc(100vh-10rem)] flex-col mb-20 relative ">
+<div class="flex items-center justify-center h-[calc(100vh-10rem)] flex-col mb-20 relative">
   <div class="text-black font-videogame p-4 relative animate-pulse-fade-in">
     <h1 class="video-game text-center text-zinc-300 text-9xl hover:scale-105 duration-200 cursor-default">
       <span class="animate-pulse ;">VISION-</span><span class="text-emerald-300 ">ARCH</span>
     </h1> 
   </div>
   <div class="absolute inset-0 z-[-1]  justify-center mx-auto flex ">
-    <Image src={Fondo} alt="Imagen de fondo" class=" object-cover mx-auto max-w-full max-h-full animate-zoom-in"/>
+    <Image src={Fondo} alt="Imagen de fondo" class=" object-cover mx-auto md:max-w-5xl animate-zoom-in"/>
   </div>
-  <div class="flex justify-evenly w-3/4 py-10 items-baseline opacity-70">
+  <div class="flex justify-evenly w-1/2 py-10 items-baseline opacity-70">
     <p class="text-emerald-300 text-2xl font-black tracking-widest">Imagina</p>
     <span class="dot my-auto bg-emerald-300"></span>
     <p class="text-emerald-300 text-2xl font-black tracking-widest">Visualiza</p>
