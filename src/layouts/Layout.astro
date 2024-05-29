@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import Navbar from "../components/Navbar.jsx";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Vision-Arch | {title}</title>
+  </head>
+  <body
+    class="bg-[radial-gradient(90.40%_89.55%_at_50.76%_50.29%,rgba(82,45,111,1)_0%,rgba(15,17,80,1)_100%)]
+  flex flex-col min-h-screen"
+  >
+    <header class="">
+      <Navbar client:load />
+    </header>
+    <main class="mt-20 overflow-x-hidden flex flex-col gap-0">
+      <slot/>
+    </main>
+  </body>
+</html>
