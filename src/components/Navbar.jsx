@@ -18,11 +18,11 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed nav z-50 ">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed nav z-50 bg-slate-500 bg-opacity-50">
       <div>
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
         <a href='/' >
-          <h1 className="text-3xl font-signature ml-2 text-gray-400 font-semibold hover:text-emerald-300 hover:scale-105 duration-200">
+          <h1 className="text-3xl font-signature ml-2 text-gray-200 font-semibold hover:text-emerald-300 hover:scale-105 duration-200">
               Vision-Arch
           </h1>
         </a>
@@ -32,7 +32,7 @@ const Navbar = () => {
         {links.map(({ id, link, name }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-400 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 hover:text-emerald-300 duration-200 link-underline"
           >
             <a href={link}>{name}</a>
           </li>
